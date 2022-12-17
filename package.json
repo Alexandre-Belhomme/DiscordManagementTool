@@ -1,0 +1,21 @@
+{
+  "name": "discordmanagementtool",
+  "version": "0.0.1",
+  "description": "Various Discord Tools to provide advance feature for server management",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alexandre-Belhomme/DiscordManagementTool.git"
+  },
+  "keywords": [],
+  "author": "Spokeek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Alexandre-Belhomme/DiscordManagementTool/issues"
+  },
+  "homepage": "https://github.com/Alexandre-Belhomme/DiscordManagementTool#readme"
+}
