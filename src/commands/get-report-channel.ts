@@ -9,7 +9,7 @@ export const GetReportChannel: Command = {
     ),
 
   commandProcessor: async (interaction, logger) => {
-    logger.warn("Not implemented");
+    logger.warn("Not implemented yet");
     await interaction.reply({
       content: "Not implemented yet",
       ephemeral: true,

@@ -20,6 +20,8 @@ export function addCommandEventListener() {
 
     const commandName = interaction.commandName;
     const commandLogger = logger.child({
+      callerId: interaction.user.id,
+      callerTag: interaction.user.tag,
       commandName,
       interractionId: interaction.id,
     });
@@ -32,9 +34,7 @@ export function addCommandEventListener() {
     }
 
     try {
-      commandLogger.info(
-        `Command /${commandName} called by ${interaction.user.tag}`
-      );
+      commandLogger.info(`Command /${commandName} called`);
       await command.commandProcessor(interaction, commandLogger);
     } catch (error) {
       commandLogger.error(error);
