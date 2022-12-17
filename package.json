@@ -1,5 +1,5 @@
 {
-  "name": "discordmanagementtool",
+  "name": "discord-management-tool",
   "version": "0.0.1",
   "description": "Various Discord Tools to provide advance feature for server management",
   "main": "index.js",
