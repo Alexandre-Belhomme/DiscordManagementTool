@@ -15,7 +15,7 @@
     "typescript-eslint": "0.0.1-alpha.0"
   },
   "scripts": {
-    "start": "ts-node-esm src/index.ts | pino-pretty",
+    "start-server": "ts-node-esm -r dotenv/config src/run-server.ts | pino-pretty",
     "build": "npm exec tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --fix",
