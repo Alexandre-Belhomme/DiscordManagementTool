@@ -15,3 +15,5 @@ export const DISCORD_CLIENT_ID = fetchEnv("DISCORD_CLIENT_ID");
 export const DISCORD_DEV_GUID_ID = fetchEnv("DISCORD_DEV_GUID_ID");
 
 export const LOG_LEVEL = fetchEnv("LOG_LEVEL");
+
+export const DATABASE_PATH = fetchEnv("DATABASE_PATH");
