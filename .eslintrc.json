@@ -25,6 +25,6 @@
     "rules": {
         "prettier/prettier": "warn",
         "no-console": "error",
-        "@typescript-eslint/restrict-template-expressions": "warn"
+        "@typescript-eslint/restrict-template-expressions": "off"
     }
 }

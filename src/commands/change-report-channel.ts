@@ -17,18 +17,15 @@ export const ChangeReportChannel: Command = {
     .setDescription("Will change the report target channel."),
 
   commandProcessor: async (interaction, logger) => {
-    const reportChannel = interaction.options.get(reportChannelKey)?.value;
-    logger.info(`Follow report called with channel ID ${reportChannel}`);
+    const reportChannel = interaction.options.get(reportChannelKey)?.channel;
 
     try {
       if (!reportChannel) {
         throw new Error(`The "${reportChannelKey}" option is required`);
       }
-      if (typeof reportChannel !== "string") {
-        throw new Error(`The "${reportChannelKey}" has to be a valid channel`);
-      }
 
-      const channel = await client.channels.fetch(reportChannel);
+      logger.info(`Follow report called with channel ${reportChannel.name}`);
+      const channel = await client.channels.fetch(reportChannel.id);
       logger.info(`Found channel is of type ${channel?.type}`);
 
       if (!channel?.isTextBased()) {

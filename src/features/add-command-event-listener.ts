@@ -38,10 +38,12 @@ export function addCommandEventListener() {
       await command.commandProcessor(interaction, commandLogger);
     } catch (error) {
       commandLogger.error(error);
-      await interaction.reply({
-        content: "There was an error while executing this command!",
-        ephemeral: true,
-      });
+      if (!interaction.replied) {
+        await interaction.reply({
+          content: "There was an error while executing this command!",
+          ephemeral: true,
+        });
+      }
     }
   });
 }
