@@ -1,4 +1,5 @@
 import { SlashCommandBuilder } from "discord.js";
+import { saveTargetReportChannel } from "../features/storage.js";
 import { client } from "../utils/client.js";
 import { Command } from "../utils/types.js";
 
@@ -35,6 +36,8 @@ export const ChangeReportChannel: Command = {
           `The "${reportChannelKey}" has to be a valid text based channel`
         );
       }
+
+      saveTargetReportChannel(channel.id);
 
       await interaction.reply({
         content: `Confirmation: All new reports will be written in <#${channel.id}>`,
